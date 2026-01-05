@@ -18,8 +18,8 @@ To understand how this attack disrupts the network, we must look at the standard
 ### How the SYN Flood Impacts Performance
 * **Malicious Action:** In this scenario, the attacker sends a massive volume of SYN packets but never sends the final ACK packet.
 * **Resource Exhaustion:** The server is forced to keep "half-open" connections active, waiting for acknowledgments that never arrive.
-* **Service Malfunction:** Because the server's connection capacity is exhausted by these fake requests, it loses the ability to respond to legitimate traffic from customers and employees, leading to the observed "connection timeout".
-
+* **Service Malfunction:** Because the server's connection capacity is exhausted by these fake requests, the server is unable to open a new connection to new visitors. This results in the "connection timeout" messages experienced by legitimate users.
+  
 ## 4. Response and Mitigation
 * **Immediate Mitigation:** The server was taken offline temporarily to recover its operating status.
 * **Firewall Configuration:** The firewall was configured to block the specific IP address associated with the attack.
